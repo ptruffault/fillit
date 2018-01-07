@@ -13,12 +13,11 @@
 NAME		= fillit
 
 LIB_PATH	= ./libft/
+
 LIB			= -Llibft/ -lft
 
 SRC			= *.c
 CFLAGS		= -Wall -Werror -Wextra
-
-VTEST		= test/test
 
 all: $(NAME)
 
