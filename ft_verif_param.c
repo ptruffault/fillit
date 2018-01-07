@@ -6,7 +6,7 @@
 /*   By: ptruffau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 15:53:32 by ptruffau          #+#    #+#             */
-/*   Updated: 2018/01/07 16:49:56 by ptruffau         ###   ########.fr       */
+/*   Updated: 2018/01/07 16:55:25 by ptruffau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,14 +91,14 @@ int			ft_verif_param(t_data *data, int argc, char **argv)
 		return (-1);
 	while ((ret = read(fd, data->str, BUFF_SIZE)))
 	{
-		data->str[ret] = '\0';	
+		data->str[ret] = '\0';
 		if ((ret != 20 && ret != 21) || ft_verif_file(data->str) == -1
 		|| ft_setup(data) == -1 || ft_verif_tetri(data) == -1
 		|| ft_add_data(data) != 0)
 			return (-1);
 		data->chara = a++;
 		if (ret == 20)
-			break;
+			break ;
 		data = data->next;
 	}
 	close(fd);
