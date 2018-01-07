@@ -51,6 +51,6 @@ int				ft_max(int a, int b);
 void			ft_sort(t_map *map, t_data *data);
 char			**ft_new_map(int len);
 int				ft_setup(t_data *data);
-int				ft_verif_param(t_data *data, int argc, char **argv);
+int				ft_verif_param(t_data *data, char **argv);
 int				ft_add_data(t_data *d);
 #endif

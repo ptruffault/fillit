@@ -35,7 +35,12 @@ int		main(int argc, char **argv)
 	t_data	data;
 	t_map	map;
 
-	if (ft_verif_param(&data, argc, argv) == -1)
+	if (argc != 2)
+	{
+		ft_putstr("usage: fillit [file]\n");
+		return (-1);
+	}
+	if (ft_verif_param(&data, argv) == -1)
 	{
 		ft_putstr("error\n");
 		return (-1);

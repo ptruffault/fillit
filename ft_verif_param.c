@@ -80,14 +80,14 @@ static int	ft_verif_file(char *str)
 	return (0);
 }
 
-int			ft_verif_param(t_data *data, int argc, char **argv)
+int			ft_verif_param(t_data *data, char **argv)
 {
 	int		ret;
 	int		fd;
 	char	a;
 
 	a = 'A';
-	if (argc != 2 || !(fd = open(argv[1], O_RDONLY)))
+	if (!(fd = open(argv[1], O_RDONLY)))
 		return (-1);
 	while ((ret = read(fd, data->str, BUFF_SIZE)))
 	{
