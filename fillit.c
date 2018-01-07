@@ -6,7 +6,7 @@
 /*   By: ptruffau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 15:54:29 by ptruffau          #+#    #+#             */
-/*   Updated: 2018/01/06 16:29:37 by ptruffau         ###   ########.fr       */
+/*   Updated: 2018/01/07 16:49:38 by ptruffau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ int		main(int argc, char **argv)
 	t_map	map;
 
 	if (ft_verif_param(&data, argc, argv) == -1)
+	{
+		ft_putstr("error\n");
 		return (-1);
+	}
 	map.len = ft_max(data.i, data.j) - 1;
 	map.best = 0;
 	while (map.best == 0)
