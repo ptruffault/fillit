@@ -16,7 +16,12 @@ LIB_PATH	= ./libft/
 
 LIB			= -Llibft/ -lft
 
-SRC			= *.c
+SRC			= fillit.c \
+			  fonction_chiantes.c \
+			  ft_put_tetri_intra.c \
+			  ft_setup.c \
+			  ft_verif_param.c
+
 CFLAGS		= -Wall -Werror -Wextra
 
 all: $(NAME)
