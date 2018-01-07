@@ -71,14 +71,19 @@ FLAG = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME):
-	$(CLANG) -c $(FLAG) $(SRC) -I .
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@$(CLANG) -c $(FLAG) $(SRC) -I .
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[92mCreate $(NAME)\033[0m"
 
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
+	@echo "\033[92mClean .o\033[0m"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "\033[92mClean $(NAME)\033[0m"
 
 re: fclean all
+
+.PHONY: all clean fclean re
