@@ -6,7 +6,7 @@
 #    By: ptruffau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 11:16:13 by ptruffau          #+#    #+#              #
-#    Updated: 2018/01/06 15:53:03 by ptruffau         ###   ########.fr        #
+#    Updated: 2018/01/07 16:59:07 by ptruffau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,5 @@ fclean:
 	@echo "\033[92mClean $(NAME)\033[0m"
 
 re:	fclean all
-
-test: re
-	clear
-	cat $(VTEST)0
-	@./$(NAME) $(VTEST)0
 
 .PHONY: all clean fclean re test
