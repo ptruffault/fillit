@@ -13,12 +13,16 @@
 NAME		= fillit
 
 LIB_PATH	= ./libft/
+
 LIB			= -Llibft/ -lft
 
-SRC			= *.c
-CFLAGS		= -Wall -Werror -Wextra
+SRC			= fillit.c \
+			  fonction_chiantes.c \
+			  ft_put_tetri_intra.c \
+			  ft_setup.c \
+			  ft_verif_param.c
 
-VTEST		= test/test
+CFLAGS		= -Wall -Werror -Wextra
 
 all: $(NAME)
 
@@ -37,4 +41,4 @@ fclean:
 
 re:	fclean all
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
